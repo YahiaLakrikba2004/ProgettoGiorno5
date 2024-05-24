@@ -1,5 +1,7 @@
 package player_multimediale;
 
+import java.util.Scanner;
+
 public class Video extends ElementoMultimediale implements Volume, Luminosità{
     private int luminosità;
     private int durata;
@@ -15,6 +17,28 @@ public class Video extends ElementoMultimediale implements Volume, Luminosità{
         this.durata= durata;
         this.luminosità = luminosità;
         this.volume = volume;
+    }
+
+    @Override
+    public void settings(Scanner in) {
+        int luminosita;
+        int volume;
+        System.out.println("Inserire valore luminosita per" + getTitolo());
+        luminosita = in.nextInt();
+        in.nextLine();
+        if (this.luminosità> luminosita)
+            abbassaLuminosità(luminosita);
+        else
+            aumentaLuminosità(luminosita);
+        System.out.println("Inserire il valore Volume per " + getTitolo());
+
+        volume = in.nextInt();
+        in.nextLine();
+        if (this.volume > volume)
+            abbassaVolume(volume);
+        else
+            alzaVolume(volume);
+
     }
 
 

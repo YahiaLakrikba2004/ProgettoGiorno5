@@ -1,5 +1,7 @@
 package player_multimediale;
 
+import java.util.Scanner;
+
 public class Immagine extends ElementoMultimediale implements Luminosità{
     private int luminosità;
 
@@ -19,6 +21,18 @@ public class Immagine extends ElementoMultimediale implements Luminosità{
     @Override
     public void start() {
         show();
+    }
+
+    @Override
+    public void settings(Scanner in) {
+        int luminosita;
+        System.out.println("Inserire Valore Luminosità" + getTitolo());
+        luminosita = in.nextInt();
+        in.nextLine();
+        if (this.luminosità > luminosita)
+            abbassaLuminosità(luminosita);
+        else
+            aumentaLuminosità(luminosita);
     }
 
 

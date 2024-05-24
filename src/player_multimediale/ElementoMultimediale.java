@@ -1,5 +1,7 @@
 package player_multimediale;
 
+import java.util.Scanner;
+
 public abstract class ElementoMultimediale {
 
     private String titolo;
@@ -15,11 +17,16 @@ public abstract class ElementoMultimediale {
     public String getTitolo() {
         return titolo;
     }
-
-    public void setTitolo(String titolo) {
-        this.titolo = titolo;
-    }
-
     public abstract void start();
 
+    public abstract void settings(Scanner in);
 }
+
+
+
+
+
+
+
+
+
