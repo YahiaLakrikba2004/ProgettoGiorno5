@@ -1,7 +1,9 @@
 package player_multimediale;
 
+//interfaccia Luminosità
+
 public interface Luminosità {
-    void alzaLuminosità(int chiaro);
+    void aumentaLuminosità(int chiaro);
 
     void abbassaLuminosità(int scuro);
 
