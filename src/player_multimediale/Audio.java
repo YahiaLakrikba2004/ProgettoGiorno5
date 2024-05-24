@@ -1,6 +1,5 @@
 package player_multimediale;
 
-import java.util.Scanner;
 
 public class Audio extends ElementoMultimediale implements Volume {
     private int volume;
@@ -10,7 +9,6 @@ public class Audio extends ElementoMultimediale implements Volume {
         super(titolo);
 
     }
-
 
     //override di alzavolume e abbassavolume
     @Override
@@ -22,4 +20,25 @@ public class Audio extends ElementoMultimediale implements Volume {
     public void abbassaVolume(int abbassa) {
 
     }
+
+    @Override
+    public void start() {
+    }
+
+    public Audio play() {
+        String esclamativo = "";
+        String durata = "";
+        for (int x = 0; x < this.volume; x++) {
+            esclamativo += "!";
+
+        }
+        for (int x =  0; x < this.durata; x++) {
+            durata += getTitolo();
+        }
+        System.out.println(durata + " " + esclamativo);
+
+
+        return null;
+    }
+
 }
